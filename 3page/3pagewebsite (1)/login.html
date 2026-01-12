@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+   <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="banner">
+        <form class="card" action="index.html" method="get">
+
+            <h1>Welcome Back !</h1>
+
+            <div class="label">Email</div>
+            <div class="input-group">
+                <input type="text" placeholder="Username / Email" required>
+            </div>
+
+            <div class="label">Password</div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+                <i class="fa-solid fa-eye toggle-password" onclick="togglePassword()"></i>
+            </div>
+
+            <div class="btn-group">
+                <button type="submit" class="login-btn">Login</button>
+                <button type="button" class="register-btn">Register</button>
+            </div>
+
+            <div class="google-login">
+                <button type="button" class="google-btn">
+                    <i class="fa-brands fa-google"></i> Continue with Google
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const pass = document.getElementById("password");
+            const icon = document.querySelector(".toggle-password");
+
+            if (pass.type === "password") {
+                pass.type = "text";
+                icon.classList.replace("fa-eye", "fa-eye-slash");
+            } else {
+                pass.type = "password";
+                icon.classList.replace("fa-eye-slash", "fa-eye");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

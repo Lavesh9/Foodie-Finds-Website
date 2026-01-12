@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie Find</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="3page.css">
+  <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <!-- LEFT PART -->
+      <div class="left">
+        <div class="logo">
+          <img src="assets/Images/Logo/foodie.png" alt="">
+          <p>FOODIE FIND</p>
+        </div>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for restaurants or dishes...">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <!-- RIGHT PART -->
+      <div class="right">
+        <div class="section">
+          <div class="close-btn"><i class="fa-solid fa-xmark"></i></div>
+          <p>Home</p>
+          <a href="shop.html">
+            <p>Restaurants</p>
+          </a>
+          <a href="#contact">
+            <p>Contact</p>
+          </a>
+          <a href="About.html">
+            <p>About</p>
+          </a>
+
+          <a href="login.html"><button>Profile</button></a>
+        </div>
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <section>
+    <div class="banner">
+
+
+    </div>
+    <div class="mainbox">
+      <div class="order">
+        <div class="online">
+          <h2>FOOD DELIVERY</h2>
+          <h3>From Restautant</h3>
+          <button> <a href="shop.html">UPTO 60% OFF</a></button>
+
+        </div>
+        <i class="card-arrow fa-solid fa-arrow-right-to-bracket"></i>
+
+        <div class="icon">
+          <img src="assets/Images/Product/food1.png" alt="">
+        </div>
+
+      </div>
+      <div class="order">
+        <div class="online">
+          <h2>INSTAMART</h2>
+          <h3>Instant Grocery</h3>
+          <button>UPTO 40% OFF</button>
+
+        </div>
+        <i class="card-arrow fa-solid fa-arrow-right-to-bracket"></i>
+
+        <div class="icon">
+          <img src="assets/Images/Product/food1.png" alt="">
+        </div>
+      </div>
+      <div class="order">
+        <div class="online">
+          <h2>DINEOUT</h2>
+          <h3>Eat Out & Save </h3>
+          <button>UPTO 50% OFF</button>
+
+        </div>
+       <i class="card-arrow fa-solid fa-arrow-right-to-bracket"></i>
+
+        <div class="icon">
+          <img src="assets/Images/Product/food1.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="contact" class="contact-dark">
+    <h2>GET IN TOUCH</h2>
+    <p>We usually respond within 24 hours!</p>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Foodie Find | Designed by Lavesh Suwasiya</p>
+  </footer>
+</body>
+<script>
+  let hamburger = document.querySelector(".hamburger");
+  let menu = document.querySelector(".right .section");
+  let closeBtn = document.querySelector(".close-btn");
+
+  // OPEN MENU
+  hamburger.addEventListener('click', function () {
+    menu.style.transform = "translateX(0)";
+  });
+
+  // CLOSE MENU
+  closeBtn.addEventListener('click', function () {
+    menu.style.transform = "translateX(-100%)";
+  });
+</script>
+
+</html>

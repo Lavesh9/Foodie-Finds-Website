@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.banner {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url(assets/Images/Banner/Grocery2.jpg) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4vh 4vw;
+}
+
+.card {
+    width: 100%;
+    max-width: 40vw;
+    min-width: 280px;
+    padding: 8vh 6vw;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(1vh);
+    border-radius: 1.5vw;
+    border: 0.1vw solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.4);
+    animation: fadeUp 0.8s ease;
+    color: #fff;
+}
+
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 3vh;
+    letter-spacing: 0.2vw;
+    font-size: 2.2vw;
+}
+
+
+.label {
+    margin-bottom: 0.8vh;
+    font-size: 1.1vw;
+    opacity: 0.9;
+}
+
+
+.input-group {
+    position: relative;
+    margin-bottom: 2.2vh;
+}
+
+input {
+    width: 100%;
+    height: 5.5vh;
+    padding: 0 3vw 0 1vw;
+    border-radius: 0.8vw;
+    border: none;
+    background: rgba(255, 255, 255, 0.85);
+    font-size: 1.1vw;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2vw #ff4d4d;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 1.2vw;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333;
+    font-size: 1.3vw;
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    gap: 3vw;
+    margin-top: 6vh;
+    flex-wrap: wrap;
+}
+
+button {
+    flex: 1;
+    height: 5.5vh;
+    border-radius: 0.8vw;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+    font-size: 1.1vw;
+}
+
+
+.login-btn {
+    background: linear-gradient(135deg, #ff4d4d, #b30000);
+    color: #fff;
+}
+
+.login-btn:hover {
+    transform: translateY(-0.3vh);
+}
+
+
+.register-btn {
+    background: transparent;
+    color: #fff;
+    border: 0.1vw solid #fff;
+}
+
+.register-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+/* Google */
+.google-login {
+    margin-top: 4vh;
+    text-align: center;
+}
+
+.google-btn {
+    width: 100%;
+    height: 5vh;
+    border-radius: 0.8vw;
+    border: none;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.1vw;
+}
+
+.google-btn i {
+    color: #db4437;
+    font-size: 1.4vw;
+}
+
+
+
+.google-btn:hover {
+    background: #f1f1f1;
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+    .card {
+        max-width: 80vw;
+        padding: 4vh 5vw;
+    }
+
+    h1 {
+        font-size: 6vw;
+    }
+
+    input,
+    button,
+    .google-btn {
+        font-size: 4vw;
+    }
+
+    .label {
+        font-size: 3.5vw;
+    }
+
+    .google-btn i {
+        font-size: 4vw;
+        
+    }
+
+    .toggle-password {
+        font-size: 4vw;
+    }
+}
